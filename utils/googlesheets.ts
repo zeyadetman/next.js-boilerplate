@@ -1,6 +1,4 @@
 import { google } from "googleapis";
-import fs from "fs";
-import path from "path";
 
 const TEXTS_SHEET_NAME = "blog";
 export async function getTopics() {
@@ -22,11 +20,9 @@ export async function getTopics() {
     const rows = response.data.values;
     if (rows?.length) {
       const rowsWithoutHeader = rows.slice(1, rows.length);
-      const data = rows.map((row) => ({
-        row,
-      }));
+      const data = rowsWithoutHeader.map((row) => row[0]);
 
-      console.log(rowsWithoutHeader, data);
+      console.log(data);
 
       return data;
     }
