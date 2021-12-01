@@ -9,6 +9,8 @@ interface Props {
 function Layout(props: Props) {
   const { children } = props;
 
+  console.log("Layout");
+
   return (
     <>
       <Header />
