@@ -1,12 +1,26 @@
 import React, { ReactElement } from "react";
+import { getTopics } from "../../../utils/googlesheets";
 import Layout from "../../components/Layout";
 import BlogLayout from "../../components/Layout/BlogLayout";
 
-interface Props {}
+interface Props {
+  w: any;
+}
+
+export const getStaticProps = async () => {
+  const w = await getTopics();
+  console.log(w);
+  return {
+    props: {
+      w,
+    },
+  };
+};
 
 function Blog(props: Props) {
-  const {} = props;
+  const { w } = props;
 
+  console.log({ w });
   return <>Blog Post</>;
 }
 
