@@ -1,5 +1,20 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Features
+
+This boilerplate includes:
+- Next.js
+- Typescript
+- Eslint
+- Google Sheets API In server side
+- Blog-file structure
+- Topics-file structure
+- Multiple Layouts
+
+## Usage
+
+You can use this boilerplate to create a new Next.js project, or trying out Next.js features.
+
 ## Getting Started
 
 First, run the development server:
